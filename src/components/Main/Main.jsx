@@ -17,9 +17,7 @@ const Main = ({ searchTerm }) => {
     }
 
     setLoading(true);
-    fetch(
-      `https://landing-page-spotify-react.vercel.app/api/artists?name_like=${searchTerm}`
-    )
+    fetch(`http://localhost:3000/artists?name_like=${searchTerm}`)
       .then((response) => response.json())
       .then((data) => {
         setLoading(false);
